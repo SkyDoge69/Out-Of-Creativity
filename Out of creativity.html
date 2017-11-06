@@ -1,0 +1,473 @@
+<!DOCTYPE html>
+
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="utf-8" />
+    <title>Quiz</title>
+</head>
+<body>
+    <style>
+        #table_1 {
+            background-color:rgb(211, 202, 202);
+            border: 4px solid rgba(0, 0, 0, 0.815);
+            width: 1280px;
+            height: 670px;
+            color: black;
+            text-align: center;
+        }
+
+        #center001 {
+            text-align: center;
+            font-size:large;
+
+        }
+        h2{
+            font-size:xx-large;
+            font-family:'Times New Roman', Times, serif;
+        }
+        p{
+            text-align:bottom;
+            font-family:Verdana, Geneva, Tahoma, sans-serif;
+            font-size:x-large;
+        }
+        button{
+            border-radius:8px;
+            background-color:rgb(69, 75, 60); /* Green */
+            border: none;
+            color: white;
+            padding: 15px 28px;
+            text-align: center;
+            text-decoration: none;
+            display: inline-block;
+            font-size: 16px;
+            
+            
+        }
+        
+       
+
+    </style>
+
+    <div id="table_1">
+
+        <h2>Какво да правя сега?</h2>
+        <hr>
+        <div id="center001">Въпрос: <text id="q001">0</text> 
+        <p id="question01"></p>
+        <p id="msg01"></p>
+        <br />
+        <br />
+        <div id="starter01">
+            <button onclick="begin001()" id="b001">Да започваме!</button><br />
+        </div>
+        <p id="n001"></p>
+
+        <script>
+            
+            var d = 0;
+            d++;
+
+            function begin001() {
+                document.getElementById("q001").innerHTML = d++;
+                document.getElementById("question01").innerHTML = "Какво ви е любимото занимание?" + "<br /><br /><br />" + "<button onclick=ans001() id=q1>Видео игри</button><br />" + "<button onclick=ans002() id=q2>Спорт</button><br />" + "<button onclick=ans003() id=q3>Изкуства</button><br />" + "<button onclick=ans004() id=q4>Други</button><br />";
+
+document.getElementById("starter01").innerHTML = "";
+}
+function ans001() {
+   
+document.getElementById("question01").innerHTML = "Добър избор.Вече те харесвам.";
+document.getElementById("starter01").innerHTML = "";
+document.getElementById("n001").innerHTML = "<button onclick=nxt1()>Следващ въпрос</button><br />";
+}
+function ans002() {
+document.getElementById("question01").innerHTML = "Продължавай да спортуваш!";
+document.getElementById("starter01").innerHTML = "";
+document.getElementById("n001").innerHTML = "<button onclick=nxt2()>Следващ въпрос</button><br />";
+
+}
+function ans003() {
+document.getElementById("question01").innerHTML = "Хората рядко избират този отговор, трябва да се гордееш!";
+document.getElementById("starter01").innerHTML = "";
+document.getElementById("n001").innerHTML = "<button onclick=nxt3()>Следващ въпрос</button><br />";
+
+}
+function ans004() {
+document.getElementById("question01").innerHTML = "Интересен отговор...";
+document.getElementById("starter01").innerHTML = "";
+document.getElementById("n001").innerHTML = "<button onclick=nxt4()>Следващ въпрос</button><br />";
+
+}
+function nxt1() {
+document.getElementById("question01").innerHTML = "Какво по-точно играете?" + "<br /><br /><br />" + "<button onclick=ans005() id=q5>Shooter</button><br />" + "<button onclick=ans006() id=q6>Strategy</button><br />" + "<button onclick=ans007() id=q7>MOBA</button><br />" + "<button onclick=ans008() if=q8>Други</button><br />";
+document.getElementById("n001").innerHTML = "";
+document.getElementById("q001").innerHTML = d++;
+}
+function ans005() {
+    
+    document.getElementById("question01").innerHTML = "Харесваш ми.";
+    document.getElementById("starter01").innerHTML = "";
+    document.getElementById("n001").innerHTML = "<button onclick=nxt4()>Продължи</button><br />";
+}
+function ans006() {
+    
+    document.getElementById("question01").innerHTML = "Харесваш ми.";
+    document.getElementById("starter01").innerHTML = "";
+    document.getElementById("n001").innerHTML = "<button onclick=nxt4()>Продължи</button><br />";
+}
+function ans007() {
+    
+    document.getElementById("question01").innerHTML = "Харесваш ми.";
+    document.getElementById("starter01").innerHTML = "";
+    document.getElementById("n001").innerHTML = "<button onclick=nxt4()>Продължи</button><br />";
+}
+function ans008() {
+    
+    document.getElementById("question01").innerHTML = "Мислихме, че сме изброили всички възможни, предполагам не...";
+    document.getElementById("starter01").innerHTML = "";
+    document.getElementById("n001").innerHTML = "<button onclick=nxt4()>Продължи</button><br />";
+}
+function nxt2() {
+document.getElementById("question01").innerHTML = "Какъв спорт по-точно?" + "<br /><br /><br />" + "<button onclick=ans009() id=q9>Футбол, волейбол, баскетбол</button><br />" + "<button onclick=ans010() id=q10>Плуване, лека атлетика, гимнастика</button><br />" + "<button onclick=ans011() id=q11>Други</button><br />";
+document.getElementById("n001").innerHTML = "";
+document.getElementById("q001").innerHTML = d++;
+}
+function ans009() {
+    
+    document.getElementById("question01").innerHTML = "Най-често срещания отговор.";
+    document.getElementById("starter01").innerHTML = "";
+    document.getElementById("n001").innerHTML = "<button onclick=nxt4()>Продължи</button><br />";
+}
+function ans010() {
+    
+    document.getElementById("question01").innerHTML = "Интересно";
+    document.getElementById("starter01").innerHTML = "";
+    document.getElementById("n001").innerHTML = "<button onclick=nxt4()>Продължи</button><br />";
+}
+function ans011() {
+    
+    document.getElementById("question01").innerHTML = "Мислихме, че сме изброили всички възможни, предполагам не...";
+    document.getElementById("starter01").innerHTML = "";
+    document.getElementById("n001").innerHTML = "<button onclick=nxt4()>Продължи</button><br />";
+}
+function nxt3() {
+document.getElementById("question01").innerHTML = "Какви изкуства по-точно?" + "<br /><br /><br />" + "<button onclick=ans012() id=q12>Рисуване, музика, танци, театър</button><br />" + "<button onclick=ans013() id=q13>Други</button><br />";
+document.getElementById("n001").innerHTML = "";
+document.getElementById("q001").innerHTML = d++;
+}
+function ans012() {
+    
+    document.getElementById("question01").innerHTML = "Това е супер";
+    document.getElementById("starter01").innerHTML = "";
+    document.getElementById("n001").innerHTML = "<button onclick=nxt4()>Продължи</button><br />";
+}
+function ans013() {
+    
+    document.getElementById("question01").innerHTML = "Мислихме, че сме изброили всички възможни, предполагам не...";
+    document.getElementById("starter01").innerHTML = "";
+    document.getElementById("n001").innerHTML = "<button onclick=nxt4()>Продължи</button><br />";
+}
+function nxt4() {
+document.getElementById("question01").innerHTML = "Често ли скучаеш?" + "<br /><br /><br />" + "<button onclick=ans014() id=q14>Доста често</button><br />" + "<button onclick=ans015() id=q15>Рядко</button><br />";
+document.getElementById("n001").innerHTML = "";
+document.getElementById("q001").innerHTML = d++;
+
+
+}
+function ans014() {
+document.getElementById("question01").innerHTML = "Очевидно не си от ТУЕС...";
+document.getElementById("starter01").innerHTML = "";
+document.getElementById("n001").innerHTML = "<button onclick=nxt5()>Нека продължим</button><br />";
+
+}
+function ans015() {
+document.getElementById("question01").innerHTML = "Това е добре";
+document.getElementById("starter01").innerHTML = "";
+document.getElementById("n001").innerHTML = "<button onclick=nxt5()>Нека продължим</button><br />";
+
+}
+function nxt5() {
+document.getElementById("question01").innerHTML = "Често ли гледате филми?" + "<br /><br /><br />" + "<button onclick=ans016() id=q16>Дап, доста често</button><br />" + "<button onclick=ans017() id=q17>Горе-долу</button><br />" + "<button onclick=ans018() id=q18>Нее, днешните филми не струват</button><br />";
+document.getElementById("n001").innerHTML = "";
+document.getElementById("q001").innerHTML = d++;
+
+}
+function ans016() {
+    
+    document.getElementById("question01").innerHTML = "Всички отговарят така, ставате предвидими :/";
+    document.getElementById("starter01").innerHTML = "";
+    document.getElementById("n001").innerHTML = "<button onclick=nxt6()>Продължи</button><br />";
+}
+function ans017() {
+    
+    document.getElementById("question01").innerHTML = "Дообрее";
+    document.getElementById("starter01").innerHTML = "";
+    document.getElementById("n001").innerHTML = "<button onclick=nxt6()>Продължи</button><br />";
+}
+function ans018() {
+    
+    document.getElementById("question01").innerHTML = "За съжаление това е вярно...";
+    document.getElementById("starter01").innerHTML = "";
+    document.getElementById("n001").innerHTML = "<button onclick=nxt6()>Продължи</button><br />";
+}
+function nxt6() {
+    document.getElementById("question01").innerHTML = "Често ли четете?"+ "<br /><br /><br />" + "<button onclick=ans019() id=q19>Вече казах, че това ми е любимото занимание..Видимо не помните</button><br />" + "<button onclick=ans020() id=q20>Не толкова често</button><br />" + "<button onclick=ans021() id=q21>Не припарвам до книги!</button><br />";
+    document.getElementById("n001").innerHTML = "";
+    document.getElementById("q001").innerHTML = d++;
+}
+function ans019() {
+    document.getElementById("question01").innerHTML = "Извинете ни... Малко сме бавни";
+    document.getElementById("starter01").innerHTML = "";
+    document.getElementById("n001").innerHTML = "<button onclick=nxt7()>Следващ въпрос</button><br />";
+}
+function ans020() {
+    document.getElementById("question01").innerHTML = "Добре, това си го записахме ☑";
+    document.getElementById("starter01").innerHTML = "";
+    document.getElementById("n001").innerHTML = "<button onclick=nxt7()>Следващ въпрос</button><br />";
+}
+function ans021() {
+    document.getElementById("question01").innerHTML = "Поне четете глупави online quiz-ове, нали?";
+    document.getElementById("starter01").innerHTML = "";
+    document.getElementById("n001").innerHTML = "<button onclick=nxt7()>Следващ въпрос</button><br />";
+}
+function nxt7() {
+document.getElementById("question01").innerHTML = "Обичате ли да пътувате?" + "<br /><br /><br />" + "<button onclick=ans022() id=q22>Да, обожавам да пътувам!</button><br />" + "<button onclick=ans023() id=q23>Не, предпочитам вкъщи</button><br />";
+document.getElementById("n001").innerHTML = "";
+document.getElementById("q001").innerHTML = d++;
+}
+function ans022() {
+    
+    document.getElementById("question01").innerHTML = "Това е страхотно!";
+    document.getElementById("starter01").innerHTML = "";
+    document.getElementById("n001").innerHTML = "<button onclick=nxt8()>Хайде напред</button><br />";
+}
+function ans023() {
+    
+    document.getElementById("question01").innerHTML = "Изпускате много";
+    document.getElementById("starter01").innerHTML = "";
+    document.getElementById("n001").innerHTML = "<button onclick=nxt9()>Хайде напред</button><br />";
+}
+function nxt8() {
+document.getElementById("question01").innerHTML = "Колко често пътувате?" + "<br /><br /><br />" + "<button onclick=ans024() id=q24>Доста!</button><br />" + "<button onclick=ans025() id=q25>Не толкова често</button><br />" + "<button onclick=ans026() id=q26>Доста рядко, но обожавам да пътувам";
+document.getElementById("n001").innerHTML = "";
+document.getElementById("q001").innerHTML = d++;
+
+}
+function ans024() {
+    
+    document.getElementById("question01").innerHTML = "Това е супер!";
+    document.getElementById("starter01").innerHTML = "";
+    document.getElementById("n001").innerHTML = "<button onclick=nxt10()>Хайде напред</button><br />";
+}
+function ans025() {
+    
+    document.getElementById("question01").innerHTML = "Ако имате възможността, възползвайте се";
+    document.getElementById("starter01").innerHTML = "";
+    document.getElementById("n001").innerHTML = "<button onclick=nxt10()>Хайде напред</button><br />";
+}
+function ans026() {
+    
+    document.getElementById("question01").innerHTML = "Ако ви се предостави възможност не я изпускайте!";
+    document.getElementById("starter01").innerHTML = "";
+    document.getElementById("n001").innerHTML = "<button onclick=nxt10()>Хайде напред</button><br />";
+}
+function nxt9() {
+    document.getElementById("question01").innerHTML = "Защо не обичате да пътувате?"+ "<br /><br /><br />" + "<button onclick=ans027() id=q27>Имам много работа вкъщи</button><br />" + "<button onclick=ans028() id=q28>Става ми мъчно за дома</button><br />" + "<button onclick=ans029() id=q29>Честно казано не знам.</button><br />";
+    document.getElementById("n001").innerHTML = "";
+    document.getElementById("q001").innerHTML = d++;
+}
+function ans027() {
+    document.getElementById("question01").innerHTML = "Уважаваме този отговор";
+    document.getElementById("starter01").innerHTML = "";
+    document.getElementById("n001").innerHTML = "<button onclick=nxt10()>Следващ въпрос</button><br />";
+}
+function ans028() {
+    document.getElementById("question01").innerHTML = "Не сте единствени";
+    document.getElementById("starter01").innerHTML = "";
+    document.getElementById("n001").innerHTML = "<button onclick=nxt10()>Следващ въпрос</button><br />";
+}
+function ans029() {
+    document.getElementById("question01").innerHTML = "Хах, интересен отговор";
+    document.getElementById("starter01").innerHTML = "";
+    document.getElementById("n001").innerHTML = "<button onclick=nxt10()>Следващ въпрос</button><br />";
+}
+function nxt10() {
+document.getElementById("question01").innerHTML = "Изберете едно от качествата по-долу, което най-добре ви характеризира" + "<br /><br /><br />" + "<button onclick=ans030() id=q30>Амбициозен</button><br />" + "<button onclick=ans031() id=q31>Трудолюбив</button><br />" + "<button onclick=ans032() id=q32>Мързелив</button><br />" + "<button onclick=ans033() id=q33>Търпелив</button><br />" + "<button onclick=ans034() id=q34>Спокоен</button><br />" + "<button onclick=ans035() id=q35>Отговорен</button><br />";
+document.getElementById("n001").innerHTML = "";
+document.getElementById("q001").innerHTML = d++;
+}
+function ans030() {
+    
+    document.getElementById("question01").innerHTML = "Едно от най-хубавите качества, ще го вземем в предвид";
+    document.getElementById("starter01").innerHTML = "";
+    document.getElementById("n001").innerHTML = "<button onclick=nxt11()>Следващия моля</button><br />";
+}
+function ans031() {
+    
+    document.getElementById("question01").innerHTML = "Интересно, ще го вземем в предвид..";
+    document.getElementById("starter01").innerHTML = "";
+    document.getElementById("n001").innerHTML = "<button onclick=nxt11()>Следващия моля</button><br />";
+}
+function ans032() {
+    
+    document.getElementById("question01").innerHTML = "Е, поне сте честни 😀";
+    document.getElementById("starter01").innerHTML = "";
+    document.getElementById("n001").innerHTML = "<button onclick=nxt11()>Следващия моля</button><br />";
+}
+function ans033() {
+    
+    document.getElementById("question01").innerHTML = "Щом още не сте се отказали от нас видимо сте търпеливи ☺";
+    document.getElementById("starter01").innerHTML = "";
+    document.getElementById("n001").innerHTML = "<button onclick=nxt11()>Следващия моля</button><br />";
+}
+function ans034() {
+    
+    document.getElementById("question01").innerHTML = "Водим записки, няма да забравим";
+    document.getElementById("starter01").innerHTML = "";
+    document.getElementById("n001").innerHTML = "<button onclick=nxt11()>Следващия моля</button><br />";
+}
+function ans035() {
+    
+    document.getElementById("question01").innerHTML = "Записахме си, ще го вземем в предвид";
+    document.getElementById("starter01").innerHTML = "";
+    document.getElementById("n001").innerHTML = "<button onclick=nxt11()>Следващия моля</button><br />";
+}
+function nxt11() {
+document.getElementById("question01").innerHTML = "Често ли излизате с приятели?" + "<br /><br /><br />" + "<button onclick=ans036() id=q36>Дап, постоянно съм навън</button><br />" + "<button onclick=ans037() id=q37>Сравнително рядко</button><br />" + "<button onclick=ans038() id=q38>Не, предпочитам да съм сам</button><br />";
+document.getElementById("n001").innerHTML = "";
+document.getElementById("q001").innerHTML = d++;
+}
+function ans036() {
+    
+    document.getElementById("question01").innerHTML = "Това е супер";
+    document.getElementById("starter01").innerHTML = "";
+    document.getElementById("n001").innerHTML = "<button onclick=nxt12()>Да продължим, близо сме до края</button><br />";
+}
+function ans037() {
+    
+    document.getElementById("question01").innerHTML ="Този отговор е рядко избиран";
+    document.getElementById("starter01").innerHTML = "";
+    document.getElementById("n001").innerHTML = "<button onclick=nxt13()>Да продължим, близо сме до края</button><br />";
+}
+function ans038() {
+    
+    document.getElementById("question01").innerHTML = "Интересно...";
+    document.getElementById("starter01").innerHTML = "";
+    document.getElementById("n001").innerHTML = "<button onclick=nxt14()>Да продължим, близо сме до края</button><br />";
+}
+function nxt12() {
+document.getElementById("question01").innerHTML = "Как намирате време, за да сте постоянно навън?" + "<br /><br /><br />" + "<button onclick=ans039() id=q39>Организиран съм</button><br />" + "<button onclick=ans040() id=q40>Изпълнявам си ангажиментите навреме</button><br />";
+document.getElementById("n001").innerHTML = "";
+document.getElementById("q001").innerHTML = d++;
+}
+function ans039() {
+    
+    document.getElementById("question01").innerHTML = "Това говори добре за вас";
+    document.getElementById("starter01").innerHTML = "";
+    document.getElementById("n001").innerHTML = "<button onclick=nxt16()>Да продължим, близо сме до края</button><br />";
+}
+function ans040() {
+    
+    document.getElementById("question01").innerHTML ="Това говори добре за вас";
+    document.getElementById("starter01").innerHTML = "";
+    document.getElementById("n001").innerHTML = "<button onclick=nxt16()>Да продължим, близо сме до края</button><br />";
+}
+function nxt13() {
+document.getElementById("question01").innerHTML = "Бихте ли искали да излизате по-често, или така ви е добре?" + "<br /><br /><br />" + "<button onclick=ans041() id=q41>Да, бих искал да прекарвам повече време с приятелите си</button><br />" + "<button onclick=ans042() id=q42>Не, така ми е добре</button><br />";
+document.getElementById("n001").innerHTML = "";
+document.getElementById("q001").innerHTML = d++;
+}
+function ans041() {
+    
+    document.getElementById("question01").innerHTML = "Ако сте добре организирани, ще имате достатъчно време";
+    document.getElementById("starter01").innerHTML = "";
+    document.getElementById("n001").innerHTML = "<button onclick=nxt17()>Да продължим, близо сме до края</button><br />";
+}
+function ans042() {
+    
+    document.getElementById("question01").innerHTML ="Окей, както кажете";
+    document.getElementById("starter01").innerHTML = "";
+    document.getElementById("n001").innerHTML = "<button onclick=nxt17()>Да продължим, близо сме до края</button><br />";
+}
+function nxt14() {
+document.getElementById("question01").innerHTML = "Защо предпочитате да сте сами?" + "<br /><br /><br />" + "<button onclick=ans043() id=q43>Защото мога да правя това, което на мен ми хареса</button><br />" + "<button onclick=ans044() id=q44>Защото не трябва да се съобразявам с никого</button><br />";
+document.getElementById("n001").innerHTML = "";
+document.getElementById("q001").innerHTML = d++;
+}
+function ans043() {
+    
+    document.getElementById("question01").innerHTML = "Имате право, но дайте шанс на приятелите си";
+    document.getElementById("starter01").innerHTML = "";
+    document.getElementById("n001").innerHTML = "<button onclick=nxt15()>Да продължим, близо сме до края</button><br />";
+}
+function ans044() {
+    
+    document.getElementById("question01").innerHTML ="Много претенции 😀";
+    document.getElementById("starter01").innerHTML = "";
+    document.getElementById("n001").innerHTML = "<button onclick=nxt15()>Да продължим, близо сме до края</button><br />";
+}
+function nxt15() {
+document.getElementById("question01").innerHTML = "Хареса ли ви този quiz?" + "<br /><br /><br />" + "<button onclick=ans045() id=q45>Да, беше страхотен!</button><br />" + "<button onclick=ans046() id=q46>Да, беше уникален!</button><br />";
+document.getElementById("n001").innerHTML = "";
+document.getElementById("q001").innerHTML = d++;
+}
+function ans045() {
+    
+    document.getElementById("question01").innerHTML = "Напълно сме съгласни!";
+    document.getElementById("starter01").innerHTML = "";
+    document.getElementById("n001").innerHTML = "<button onclick=end1()>Кликнете тук за кок</button>";
+}
+function ans046() {
+    
+    document.getElementById("question01").innerHTML ="Напълно сме съгласни!";
+    document.getElementById("starter01").innerHTML = "";
+    document.getElementById("n001").innerHTML = "<button onclick=end1()>Кликнете тук за кок</button>";
+}
+function nxt16() {
+document.getElementById("question01").innerHTML = "Хареса ли ви този quiz?" + "<br /><br /><br />" + "<button onclick=ans047() id=q47>Да, беше страхотен!</button><br />" + "<button onclick=ans048() id=q48>Да, беше уникален!</button><br />";
+document.getElementById("n001").innerHTML = "";
+document.getElementById("q001").innerHTML = d++;
+}
+function ans047() {
+    
+    document.getElementById("question01").innerHTML = "Напълно сме съгласни!";
+    document.getElementById("starter01").innerHTML = "";
+    document.getElementById("n001").innerHTML = "<button onclick=end1()>Кликнете тук за кок</button>";
+}
+function ans048() {
+    
+    document.getElementById("question01").innerHTML ="Напълно сме съгласни!";
+    document.getElementById("starter01").innerHTML = "";
+    document.getElementById("n001").innerHTML = "<button onclick=end1()>Кликнете тук за кок</button>";
+}
+function nxt17() {
+document.getElementById("question01").innerHTML = "Хареса ли ви този quiz?" + "<br /><br /><br />" + "<button onclick=ans049() id=q49>Да, беше страхотен!</button><br />" + "<button onclick=ans050() id=q50>Да, беше уникален!</button><br />";
+document.getElementById("n001").innerHTML = "";
+document.getElementById("q001").innerHTML = d++;
+}
+function ans049() {
+    
+    document.getElementById("question01").innerHTML = "Напълно сме съгласни!";
+    document.getElementById("starter01").innerHTML = "";
+    document.getElementById("n001").innerHTML = "<button onclick=end1()>Кликнете тук за кок</button>";
+}
+function ans050() {
+    
+    document.getElementById("question01").innerHTML ="Напълно сме съгласни!";
+    document.getElementById("starter01").innerHTML = "";
+    document.getElementById("n001").innerHTML = "<button onclick=end1()>Кликнете тук за кок</button>";
+}
+function end1() {
+    document.getElementById("question01").innerHTML = "";
+    document.getElementById("starter01").innerHTML = "";
+    document.getElementById("n001").innerHTML = "Едно голямо кокче";
+
+}
+  
+
+
+
+
+  </script>
+        </div>
+        </body>
+</html>
